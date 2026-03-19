@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amin Mahmoud – GitHub Profile README Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2d42;
+    --navy-light: #243b55;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+    --gray: #8a9bb0;
+    --green: #2ecc71;
+  }
+
+  body {
+    background: #e8edf2;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--navy);
+    padding: 40px 20px;
+  }
+
+  .page-label {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+
+  .readme-container {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(13,27,42,0.15);
+  }
+
+  /* ── HERO BANNER ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3a5f 100%);
+    padding: 56px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 44px;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .hero h1 span {
+    color: var(--gold-light);
+  }
+
+  .hero-title {
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 28px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+  }
+
+  .badge {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold-light);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .badge.green {
+    background: rgba(46,204,113,0.1);
+    border-color: rgba(46,204,113,0.3);
+    color: #5ddf8f;
+  }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: var(--navy-mid);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .stat-item {
+    padding: 24px 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .content {
+    padding: 48px 48px 40px;
+  }
+
+  .section {
+    margin-bottom: 44px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e8edf2;
+  }
+
+  .section-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+  }
+
+  /* ── EXPERIENCE CARDS ── */
+  .exp-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 24px 26px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s;
+  }
+
+  .exp-card:hover { box-shadow: 0 4px 16px rgba(13,27,42,0.08); }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .exp-role {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .exp-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray);
+    background: #e8edf2;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  .exp-company {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .achievements {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .achievements li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #3d5068;
+    line-height: 1.55;
+  }
+
+  .achievements li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .achievements li strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .skill-group {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+
+  .skill-group-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .skill-tag {
+    background: var(--white);
+    border: 1px solid #d0dbe8;
+    color: #3d5068;
+    font-size: 12px;
+    padding: 4px 11px;
+    border-radius: 14px;
+    font-weight: 500;
+  }
+
+  /* ── CONTACT ── */
+  .contact-strip {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .contact-left h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .contact-left p {
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  .contact-btn.primary {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .contact-btn.secondary {
+    background: rgba(255,255,255,0.08);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ── README CODE SECTION ── */
+  .readme-code-section {
+    margin-top: 40px;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(13,27,42,0.1);
+  }
+
+  .code-header {
+    background: var(--navy);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .code-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+  }
+  .code-dot.red { background: #ff5f57; }
+  .code-dot.yellow { background: #ffbd2e; }
+  .code-dot.green { background: #28ca41; }
+
+  .code-filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gray);
+    margin-left: 8px;
+  }
+
+  .code-body {
+    background: #0f1923;
+    padding: 28px 32px;
+    overflow-x: auto;
+  }
+
+  .code-body pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: #c9d8e8;
+    white-space: pre-wrap;
+  }
+
+  .cm { color: #5c7a9a; }   /* comment */
+  .ck { color: #e8c97a; }   /* keyword/heading */
+  .cs { color: #7ec8a4; }   /* string */
+  .cn { color: #9ecdf0; }   /* number/name */
+  .cb { color: #d0a0e0; }   /* bold/special */
+
+  @media (max-width: 640px) {
+    .hero { padding: 36px 24px; }
+    .hero h1 { font-size: 30px; }
+    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .content { padding: 32px 24px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .contact-strip { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<p class="page-label">⬇ GitHub Profile README — Preview</p>
+
+<div class="readme-container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-eyebrow">👋 Hello, I'm</p>
+    <h1>Amin Mahmoud<br><span>HR Professional</span></h1>
+    <p class="hero-title">Senior Human Resources Generalist · Egypt & MENA Region</p>
+    <div class="hero-badges">
+      <span class="badge">🎯 Talent Acquisition</span>
+      <span class="badge">📊 HR Analytics</span>
+      <span class="badge">🏢 Organizational Development</span>
+      <span class="badge">⚖️ Egypt Labor Law</span>
+      <span class="badge green">✅ Open to Opportunities</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-number">5+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Employees Managed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">8+</span>
+      <span class="stat-label">Industries Served</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Countries</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <!-- ABOUT -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🧑‍💼</div>
+        <h2>About Me</h2>
+      </div>
+      <p style="font-size:14.5px; color:#3d5068; line-height:1.8; max-width:680px;">
+        Results-driven Senior HR Generalist with 5+ years of experience across Egypt, Saudi Arabia, and the MENA region.
+        I specialize in building people-first cultures — from designing HR frameworks for fast-growing startups to managing
+        full-cycle HR operations for 150+ employee manufacturing teams. I bring a data-driven mindset to every HR challenge,
+        leveraging tools like SAP, Jira, and Advanced Excel to turn workforce data into strategic decisions.
+      </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💼</div>
+        <h2>Professional Experience</h2>
+      </div>
+
+      <!-- Farouk Systems -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-role">Senior HR Generalist</span>
+          <span class="exp-date">Dec 2024 – Present</span>
+        </div>
+        <p class="exp-company">Farouk Systems International · Houston, US (Hybrid – Egypt)</p>
+        <ul class="achievements">
+          <li>Managed <strong>full-cycle HR operations</strong> for a 150+ employee manufacturing workforce including recruitment, onboarding, performance reviews, and offboarding</li>
+          <li>Processed monthly payroll with <strong>100% accuracy</strong> covering salaries, deductions, bonuses, and social/medical insurance for 150+ employees</li>
+          <li>Developed and implemented updated HR policies ensuring full compliance with <strong>Egypt Labor Law & Social Insurance Law 148/2019</strong></li>
+          <li>Spearheaded <strong>quarterly performance review cycles</strong> — supporting managers in goal-setting and KPI tracking across departments</li>
+          <li>Resolved complex employee relations issues through fair investigations and mediation, <strong>improving workplace morale measurably</strong></li>
+          <li>Designed Training Needs Assessments (TNA) and recommended L&D programs to <strong>upskill the workforce</strong> strategically</li>
+          <li>Maintained HRIS data integrity, <strong>reducing documentation errors</strong> through digitized employee records</li>
+        </ul>
+      </div>
+
+      <!-- MSAAQ -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-role">Senior People & Culture Specialist</span>
+          <span class="exp-date">Jul 2024 – Dec 2024</span>
+        </div>
+        <p class="exp-company">MSAAQ LLC · SaaS / Edtech (Remote – Saudi Arabia)</p>
+        <ul class="achievements">
+          <li>Built <strong>scalable HR frameworks</strong> from scratch for a fast-growing Edtech startup in partnership with senior leadership</li>
+          <li>Delivered HR services for <strong>tech talent across 8 countries</strong> (Canada, Turkey, Morocco, Syria, Iraq, Jordan, KSA, Egypt)</li>
+          <li>Streamlined remote onboarding for distributed MENA teams, <strong>reducing new-hire ramp-up time significantly</strong></li>
+          <li>Led payroll coordination for remote employees ensuring full <strong>compliance with Saudi Labor Regulations</strong></li>
+          <li>Launched employee engagement initiatives that <strong>increased team satisfaction scores</strong> during the contract period</li>
+          <li>Set up performance management systems and conducted exit interviews to <strong>identify and reduce retention risks</strong></li>
+        </ul>
+      </div>
+
+      <!-- EGYBELL Senior -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-role">Senior HR Generalist</span>
+          <span class="exp-date">Jan 2023 – Jun 2024</span>
+        </div>
+        <p class="exp-company">EGYBELL HR Consultancy · Egypt (Hybrid)</p>
+        <ul class="achievements">
+          <li>Delivered outsourced HR services to <strong>6+ international clients</strong> including Afrexim Bank, Huawei, Honor, NEC Tokyo, Sikora Germany, and AAIS Global India</li>
+          <li>Facilitated <strong>Global Mobility services</strong> — managing visa and work permit processes for international talent</li>
+          <li>Managed employee relations for <strong>500+ outsourced staff</strong>, resolving grievances and ensuring policy adherence</li>
+          <li>Led end-to-end recruitment campaigns that <strong>reduced time-to-hire</strong> across multiple client industries</li>
+          <li>Conducted job analyses, created job descriptions, and designed org charts supporting <strong>client restructuring initiatives</strong></li>
+          <li>Utilized ERP systems to generate HR reports, track turnover, and <strong>analyze workforce data for strategic planning</strong></li>
+        </ul>
+      </div>
+
+      <!-- EGYBELL Specialist -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-role">HR Specialist</span>
+          <span class="exp-date">Jul 2021 – Jan 2023</span>
+        </div>
+        <p class="exp-company">EGYBELL HR Consultancy · Egypt (Hybrid)</p>
+        <ul class="achievements">
+          <li>Executed <strong>end-to-end recruitment</strong> — sourcing, screening, interviewing, and onboarding new hires across multiple client accounts</li>
+          <li>Administered <strong>medical insurance for outsourced staff</strong>, handling enrollments, claims processing, and employee inquiries</li>
+          <li>Maintained 100% compliant personnel files ensuring all contracts, insurance documents, and IDs were <strong>current and audit-ready</strong></li>
+          <li>Managed exit interviews and termination paperwork ensuring <strong>legally compliant and positive offboarding experiences</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🛠️</div>
+        <h2>Core Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <p class="skill-group-title">HR Operations</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Talent Acquisition</span>
+            <span class="skill-tag">Payroll Management</span>
+            <span class="skill-tag">Performance Management</span>
+            <span class="skill-tag">Employee Relations</span>
+            <span class="skill-tag">Onboarding</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Strategy & Development</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Org Development (OD)</span>
+            <span class="skill-tag">L&D Programs</span>
+            <span class="skill-tag">HR Policy Design</span>
+            <span class="skill-tag">Global Mobility</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Tech & Tools</p>
+          <div class="skill-tags">
+            <span class="skill-tag">SAP</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Advanced Excel</span>
+            <span class="skill-tag">HRIS Systems</span>
+            <span class="skill-tag">ERP Systems</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-title">Compliance & Law</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Egypt Labor Law</span>
+            <span class="skill-tag">Social Insurance Law</span>
+            <span class="skill-tag">Saudi Labor Law</span>
+            <span class="skill-tag">Cross-Cultural HR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-left">
+      <h3>Let's Connect</h3>
+      <p>Open to Senior HR & People Operations opportunities across MENA</p>
+    </div>
+    <div class="contact-links">
+      <a class="contact-btn primary" href="mailto:Aminmahmoud93@outlook.com">✉ Email Me</a>
+      <a class="contact-btn secondary" href="https://www.linkedin.com/in/a-mohamed-0320323b0">🔗 LinkedIn</a>
+      <a class="contact-btn secondary" href="tel:+201227816894">📞 Call</a>
+    </div>
+  </div>
+
+</div><!-- /readme-container -->
+
+
+<!-- README.md CODE -->
+<div class="readme-code-section" style="max-width:860px; margin:32px auto 0;">
+  <div class="code-header">
+    <span class="code-dot red"></span>
+    <span class="code-dot yellow"></span>
+    <span class="code-dot green"></span>
+    <span class="code-filename">README.md — Copy & paste this into your GitHub profile</span>
+  </div>
+  <div class="code-body">
+<pre>
+<span class="ck"># 👋 Hi, I'm Amin Mahmoud — Senior HR Professional</span>
+
+<span class="cs">**Results-driven Senior HR Generalist** with 5+ years of experience across Egypt, Saudi Arabia,
+and the MENA region. I build people-first cultures through data-driven HR strategy.</span>
+
+---
+
+<span class="ck">## 📊 At a Glance</span>
+
+| | |
+|---|---|
+| 🏢 **Current Role** | Senior HR Generalist @ Farouk Systems International |
+| 📍 **Location** | Giza, Egypt |
+| 🌍 **Experience** | Egypt · Saudi Arabia · MENA |
+| 👥 **Team Scale** | Managed HR for 500+ employees |
+| 🎯 **Focus** | Talent Acquisition · OD · Payroll · Compliance |
+
+---
+
+<span class="ck">## 💼 Professional Experience</span>
+
+<span class="cn">### 🔹 Senior HR Generalist — Farouk Systems International *(Dec 2024 – Present)*</span>
+- ▸ Managed full HR operations for **150+ employee** manufacturing workforce
+- ▸ Processed monthly payroll with **100% accuracy** for 150+ employees
+- ▸ Ensured compliance with **Egypt Labor Law & Social Insurance Law 148/2019**
+- ▸ Spearheaded quarterly **KPI-based performance review cycles**
+- ▸ Designed TNAs and L&D programs to strategically upskill the workforce
+
+<span class="cn">### 🔹 Senior People & Culture Specialist — MSAAQ LLC *(Jul – Dec 2024)*</span>
+- ▸ Built **scalable HR frameworks** for a fast-growing Edtech startup
+- ▸ Delivered HR services for tech talent across **8 countries**
+- ▸ Reduced new-hire ramp-up time via **streamlined remote onboarding**
+- ▸ Ensured **Saudi Labor Law compliance** for all remote payroll
+
+<span class="cn">### 🔹 Senior HR Generalist — EGYBELL HR Consultancy *(Jan 2023 – Jun 2024)*</span>
+- ▸ Delivered outsourced HR to **6+ international clients** (Huawei, NEC, Afrexim Bank…)
+- ▸ Managed employee relations for **500+ outsourced staff**
+- ▸ Facilitated **Global Mobility** services (visas & work permits)
+- ▸ Reduced **time-to-hire** across multiple client recruitment campaigns
+
+---
+
+<span class="ck">## 🛠️ Skills & Tools</span>
+
+<span class="cb">**HR Domains:**</span> Talent Acquisition · Payroll · Performance Management · OD · L&D · Employee Relations  
+<span class="cb">**Tools:**</span> SAP · Jira · Advanced Excel · HRIS · ERP Systems  
+<span class="cb">**Compliance:**</span> Egypt Labor Law · Social Insurance Law · Saudi Labor Regulations  
+<span class="cb">**Languages:**</span> Arabic (Native) · English (Professional)
+
+---
+
+<span class="ck">## 📬 Contact</span>
+
+📧 Aminmahmoud93@outlook.com  
+📞 +20 122 781 6894  
+🔗 [LinkedIn](https://www.linkedin.com/in/a-mohamed-0320323b0)
+</pre>
+  </div>
+</div>
+
+<p style="text-align:center; margin-top:20px; font-size:12px; color:#8a9bb0; font-family:'JetBrains Mono',monospace;">
+  Preview generated for Amin Mahmoud · GitHub Profile README
+</p>
+
+</body>
+</html>
